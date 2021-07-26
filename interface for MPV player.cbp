@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="interface for MPV player" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/interface for MPV player" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/interface for MPV player" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="`wx-config --cflags`" />
+			<Add option='[[if (GetCompilerFactory().GetCompilerVersionString(_T(&quot;gcc&quot;)) &gt;= _T(&quot;4.8.0&quot;)) print(_T(&quot;-Wno-unused-local-typedefs&quot;));]]' />
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --libs`" />
+		</Linker>
+		<Unit filename="interface_for_MPV_playerApp.cpp" />
+		<Unit filename="interface_for_MPV_playerApp.h" />
+		<Unit filename="interface_for_MPV_playerMain.cpp" />
+		<Unit filename="interface_for_MPV_playerMain.h" />
+		<Unit filename="wxsmith/interface_for_MPV_playerframe.wxs" />
+		<Extensions>
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="interface_for_MPV_playerApp.cpp" main="interface_for_MPV_playerFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/interface_for_MPV_playerframe.wxs" src="interface_for_MPV_playerMain.cpp" hdr="interface_for_MPV_playerMain.h" fwddecl="0" i18n="1" name="interface_for_MPV_playerFrame" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
