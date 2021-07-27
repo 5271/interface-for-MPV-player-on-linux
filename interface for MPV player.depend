@@ -1072,3 +1072,28 @@
 
 1585059103 /usr/include/wx-3.0/wx/gtk/msgdlg.h
 
+1626973308 source:/home/piotr/Desktop/programming/interface-for-MPV-player-on-linux/interface_for_MPV_playerApp.cpp
+	"interface_for_MPV_playerApp.h"
+	"interface_for_MPV_playerMain.h"
+	<wx/image.h>
+
+1626973308 /home/piotr/Desktop/programming/interface-for-MPV-player-on-linux/interface_for_MPV_playerApp.h
+	<wx/app.h>
+
+1627305060 /home/piotr/Desktop/programming/interface-for-MPV-player-on-linux/interface_for_MPV_playerMain.h
+	<wx/button.h>
+	<wx/checkbox.h>
+	<wx/frame.h>
+	<wx/menu.h>
+	<wx/statusbr.h>
+	<wx/textctrl.h>
+
+1627402542 source:/home/piotr/Desktop/programming/interface-for-MPV-player-on-linux/interface_for_MPV_playerMain.cpp
+	"interface_for_MPV_playerMain.h"
+	<wx/msgdlg.h>
+	<stdlib.h>
+	<stdio.h>
+	<string.h>
+	<wx/intl.h>
+	<wx/string.h>
+

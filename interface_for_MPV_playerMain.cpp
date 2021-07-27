@@ -70,7 +70,7 @@ interface_for_MPV_playerFrame::interface_for_MPV_playerFrame(wxWindow* parent,wx
     wxMenuItem* MenuItem1;
     wxMenuItem* MenuItem2;
 
-    Create(parent, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("wxID_ANY"));
+    Create(parent, id, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
     SetClientSize(wxSize(500,150));
     SetMinSize(wxSize(500,150));
     SetMaxSize(wxSize(500,150));
@@ -86,7 +86,7 @@ interface_for_MPV_playerFrame::interface_for_MPV_playerFrame(wxWindow* parent,wx
     Menu1->Append(MenuItem1);
     MenuBar1->Append(Menu1, _("&File"));
     Menu2 = new wxMenu();
-    MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
+    MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("Manual\tF1"), _("Show info about this application"), wxITEM_NORMAL);
     Menu2->Append(MenuItem2);
     MenuBar1->Append(Menu2, _("Help"));
     SetMenuBar(MenuBar1);
@@ -117,8 +117,8 @@ void interface_for_MPV_playerFrame::OnQuit(wxCommandEvent& event)
 
 void interface_for_MPV_playerFrame::OnAbout(wxCommandEvent& event)
 {
-    wxString msg = wxbuildinfo(long_f);
-    wxMessageBox(msg, _("Welcome to..."));
+    wxString msg = wxString("To play a video you just have to enter a proper video URL from eg. youtube or reddit and then click the \"Play the video\" button. The video should start playing in few seconds.");
+    wxMessageBox(msg, _("Program manual"));
 }
 
 void interface_for_MPV_playerFrame::OnButton1Click(wxCommandEvent& event)
@@ -136,7 +136,7 @@ void interface_for_MPV_playerFrame::OnButton1Click(wxCommandEvent& event)
         video += wxString(" --no-video");
         if (!noVideoAproved)
         {
-            wxMessageBox(wxT("Warning! \nThere will be no window of the video because You checked the \"No Video\" check box. In order to stop the video from playing You will have to close it through the process manager of your linux distro."));
+            wxMessageBox(wxT("Warning! \nThere will be no window of the video because you checked the \"No Video\" check box. In order to stop the video from playing you will have to close it through the process manager of your linux distro."));
             noVideoAproved = true;
         }
     }
