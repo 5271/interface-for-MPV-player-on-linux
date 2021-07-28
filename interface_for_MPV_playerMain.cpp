@@ -117,7 +117,7 @@ void interface_for_MPV_playerFrame::OnQuit(wxCommandEvent& event)
 
 void interface_for_MPV_playerFrame::OnAbout(wxCommandEvent& event)
 {
-    wxString msg = wxString("To play a video you just have to enter a proper video URL from eg. youtube or reddit and then click the \"Play the video\" button. The video should start playing in few seconds.");
+    wxString msg = wxString("To play a video you just have to enter a proper video URL from eg. youtube or reddit and then click the \"Play the video\" button. The video should start playing in few seconds. \n\nNo sound option makes the video play without any sound. Duh \n\nNo video option makes the video play without any image. Be cautious about this option because when it's on there will be no window of the video and in order to stop it from playing you will have to turn it off through the process manager of your linux distro.");
     wxMessageBox(msg, _("Program manual"));
 }
 
